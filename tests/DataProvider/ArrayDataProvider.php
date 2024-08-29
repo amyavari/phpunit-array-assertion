@@ -111,4 +111,144 @@ class ArrayDataProvider
             ],
         ];
     }
+
+    public static function listOfAssociativeArrays(): array
+    {
+        return [
+            'ordered_same_items' => [
+                'arr1' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'test'],
+                ],
+                'arr2' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'test'],
+                ],
+            ],
+            'ordered_same_items_inside_items_not_ordered' => [
+                'arr1' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'test'],
+                ],
+                'arr2' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'c' => 'test', 'b' => 'Ali'],
+                ],
+            ],
+            'ordered_one_different_item' => [
+                'arr1' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'test'],
+                ],
+                'arr2' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'another'],
+                ],
+            ],
+            'ordered_with_extra_item' => [
+                'arr1' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'test'],
+                ],
+                'arr2' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 4, 'b' => 'Ali', 'c' => 'test'],
+                ],
+            ],
+            'ordered_with_less_item' => [
+                'arr1' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'test'],
+                ],
+                'arr2' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                ],
+            ],
+            'ordered_inside_item_with_false_item' => [
+                'arr1' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'test'],
+                ],
+                'arr2' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => false],
+                ],
+            ],
+            'ordered_inside_item_with_true_item' => [
+                'arr1' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'test'],
+                ],
+                'arr2' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => true],
+                ],
+            ],
+            'ordered_inside_item_with_extra_item' => [
+                'arr1' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'test'],
+                ],
+                'arr2' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'test', 'd' => 'extra'],
+                ],
+            ],
+            'ordered_inside_item_with_less_item' => [
+                'arr1' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'test'],
+                ],
+                'arr2' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali'],
+                ],
+            ],
+            'not_ordered_same_items' => [
+                'arr1' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'test'],
+                ],
+                'arr2' => [
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'test'],
+                ],
+            ],
+            'not_ordered_same_items_inside_items_not_ordered' => [
+                'arr1' => [
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'b' => 'Ali', 'c' => 'test'],
+                ],
+                'arr2' => [
+                    ['a' => 2, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                    ['a' => 3, 'c' => 'test', 'b' => 'Ali'],
+                ],
+            ],
+            //check all conditions of not ordered list?
+            //check all conditions of not ordered list with not ordered inside items?
+        ];
+    }
 }
