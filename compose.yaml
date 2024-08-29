@@ -1,0 +1,18 @@
+services:
+  phpunit_array_assertion:
+    build:
+      context: .
+    image: phpunit_array_assertion:latest
+    ports:
+      - 8000:80
+    # command: ["vendor/bin/phpunit"]
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: var/www/html
+        - action: rebuild
+          path: composer.json
+        - action: rebuild
+          path: composer.lock
+      
