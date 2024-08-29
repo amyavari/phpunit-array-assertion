@@ -22,4 +22,13 @@ class ArrayTest extends TestCase
         
         $this->assertSame($arr1, $arr2);
     }
+
+    #[DataProviderExternal(ArrayDataProvider::class, 'associativeArray')]
+    public function test_associative_array($arr1, $arr2): void
+    {
+        ksort($arr1);
+        ksort($arr2);
+        
+        $this->assertSame($arr1, $arr2);
+    }
 }
