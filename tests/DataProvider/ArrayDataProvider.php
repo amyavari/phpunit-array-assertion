@@ -57,4 +57,58 @@ class ArrayDataProvider
             ],
         ];
     }
+
+    public static function associativeArray(): array
+    {
+        return [
+            'ordered_same_items' => [
+                'arr1' => ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                'arr2' => ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+            ],
+            'ordered_one_different_item' => [
+                'arr1' => ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                'arr2' => ['a' => 1, 'b' => 'Ali', 'c' => 'another'],
+            ],
+            'ordered_with_extra_item' => [
+                'arr1' => ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                'arr2' => ['a' => 1, 'b' => 'Ali', 'c' => 'test', 'd' => 'extra'],
+            ],
+            'ordered_with_less_item' => [
+                'arr1' => ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                'arr2' => ['a' => 1, 'c' => 'test'],
+            ],
+            'ordered_with_false_item' => [
+                'arr1' => ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                'arr2' => ['a' => 1, 'b' => 'Ali', 'c' => false],
+            ],
+            'ordered_with_true_item' => [
+                'arr1' => ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                'arr2' => ['a' => 1, 'b' => 'Ali', 'c' => true],
+            ],
+            'not_ordered_same_items' => [
+                'arr1' => ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                'arr2' => ['b' => 'Ali', 'c' => 'test', 'a' => 1],
+            ],
+            'not_ordered_one_different_item' => [
+                'arr1' => ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                'arr2' => ['b' => 'Ali', 'c' => 'another', 'a' => 1],
+            ],
+            'not_ordered_with_extra_item' => [
+                'arr1' => ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                'arr2' => ['d' => 'extra', 'b' => 'Ali', 'c' => 'test', 'a' => 1],
+            ],
+            'not_ordered_with_less_item' => [
+                'arr1' => ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                'arr2' => ['b' => 'Ali', 'a' => 1],
+            ],
+            'not_ordered_with_false_item' => [
+                'arr1' => ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                'arr2' => ['b' => 'Ali', 'c' => false, 'a' => 1],
+            ],
+            'not_ordered_with_true_item' => [
+                'arr1' => ['a' => 1, 'b' => 'Ali', 'c' => 'test'],
+                'arr2' => ['b' => 'Ali', 'c' => true, 'a' => 1],
+            ],
+        ];
+    }
 }
